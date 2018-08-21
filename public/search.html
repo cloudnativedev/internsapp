@@ -46,13 +46,21 @@
       <a class="mdl-navigation__link" href="latest.html">Latest</a>
       <a class="mdl-navigation__link" href="supervisors.html">Supervisors</a>
       <a class="mdl-navigation__link" href="search.html">Search</a>
-      <a class="mdl-navigation__link" href="admin.html">Admin</a>
-	    <a class="mdl-navigation__link" href="login.html">Login</a>
-
     </nav>
   </div>
   <main class="mdl-layout__content">
     <div class="page-content"><!-- Your content goes here -->
+<!-- Simple Textfield -->
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="internID">
+    <label class="mdl-textfield__label" for="internID">InternID...</label>
+  </div>
+</form>
+<!-- Primary-colored flat button -->
+<button class="mdl-button mdl-js-button mdl-button--primary" onclick="internsApp.Read()">
+  Search
+</button>
 	<ul class="demo-list-three mdl-list" data-bind="foreach: interns">
   <li class="mdl-list__item mdl-list__item--three-line">
     <span class="mdl-list__item-primary-content">
