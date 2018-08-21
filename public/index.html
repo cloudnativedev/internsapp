@@ -18,6 +18,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 <script  src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<!-- KnockoutJS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-debug.js"></script>
  </head>
   <body>
 <!-- Always shows a header, even in smaller screens. -->
@@ -48,13 +50,13 @@
   </div>
   <main class="mdl-layout__content">
     <div class="page-content"><!-- Your content goes here -->
-	<ul class="demo-list-three mdl-list">
+	<ul class="demo-list-three mdl-list" data-bind="foreach: interns">
   <li class="mdl-list__item mdl-list__item--three-line">
     <span class="mdl-list__item-primary-content">
       <i class="material-icons mdl-list__item-avatar">person</i>
-      <span>Intern Name</span>
+      <span data-bind="text: name">Intern Name</span>
       <span class="mdl-list__item-text-body">
-			Student ID: <span> #StudentID </span> Name: <span> #Name </span> Project: <span> #Project </soan>
+			Student ID: <span data-bind="text: internID"> #StudentID </span> Team: <span data-bind="text: team"> #Team </span> Project: <span data-bind="text: project"> #Project </span>
       </span>
     </span>
     <span class="mdl-list__item-secondary-content">
